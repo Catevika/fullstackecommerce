@@ -6,21 +6,25 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --import=tsx --watch --env-file=.env src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "db:push": "npx drizzle-kit push:pg",
+    "db:generate": "npx drizzle-kit generate",
+    "db:migrate": "npx drizzle-kit migrate"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "drizzle-orm": "^0.36.4",
-    "express": "^4.21.1",
-    "pg": "^8.13.1"
+    "express": "^4.21.1"
   },
   "devDependencies": {
     "@genezio/types": "^1.0.19",
     "@types/express": "^5.0.0",
     "@types/pg": "^8.11.10",
     "drizzle-kit": "^0.28.1",
+    "pg": "^8.13.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }
