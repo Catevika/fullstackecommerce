@@ -1,6 +1,6 @@
 import { doublePrecision, integer, pgTable, text, varchar } from 'drizzle-orm/pg-core';
 
-export const productSchema = pgTable('products', {
+export const productTable = pgTable('products', {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   name: varchar({ length: 255 }).notNull(),
   description: text(),
